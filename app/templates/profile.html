@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block css %} 
+
+img{
+  float: left;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    float: right;
+}
+
+td, th {
+    border: 1px solid #e6e6e6;
+    text-align: left;
+    padding: 8px;
+}
+
+th{
+    background-color: #f5f5f5;
+}
+
+hr{
+	 border-top: 1px solid #e3e3e3;
+}
+
+{% endblock%}
+
+{% block main %}
+
+<h1 class="heading">Profile</h1>
+
+<img src= "{{ url_for('static', filename='image/Kirbs.png')}}"></img>
+
+<table>
+  <tr>
+    <th>Romario Fitzgerald</th>
+  </tr>
+  <tr>
+    <td>Today's date is {{date}}<hr><strong>Username:</strong> SirFitz<br><strong>ID Number:</strong> 620076507<br><strong>Age:</strong> 21<br><strong>Gender:</strong> Male<hr>I am fearsome, lovable Kirby.</td>
+  </tr>
+</table>
+
+{% endblock %}
